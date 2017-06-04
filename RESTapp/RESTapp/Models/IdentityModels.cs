@@ -16,6 +16,19 @@ namespace RESTapp.Models
             // Add custom user claims here
             return userIdentity;
         }
+        Required]
+        [Display(Name = "Gender")]
+        public bool Gender { get; set; }
+        [Required]
+        [StringLength(30, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 1)]
+        public string FirstName { get; set; }
+        [Required]
+        [StringLength(30, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 1)]
+        public string LastName { get; set; }
+        [Required]
+        [DisplayName("Date of Birth")]
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime Birthday { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
