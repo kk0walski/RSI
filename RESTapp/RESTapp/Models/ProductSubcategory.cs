@@ -12,6 +12,7 @@ namespace Client.Models
         [Required]
         public string Name { get; set; }
         [Required]
+        [DataType(DataType.DateTime)]
         public System.DateTime ModifiedDate { get; set; }
         public virtual ICollection<Product> Product { get; set; }
         [Required]

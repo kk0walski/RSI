@@ -9,6 +9,8 @@ namespace Client.Models
 {
     public class Product
     {
+        private DateTime _startDate = DateTime.Now;
+        private DateTime _finishDate = DateTime.Now;
         [Key]
         public int ProductID { get; set; }
         [Required(ErrorMessage = "Nie wpisales nazwy")]
@@ -21,10 +23,18 @@ namespace Client.Models
         public string Description { get; set; }
         [Required]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd-hh-mm}", ApplyFormatInEditMode = true)]
-        public System.DateTime SellStartDate { get; set; }
+        public System.DateTime SellStartDate
+        {
+            get { return _startDate; }
+            set { _startDate = value; }
+        }
         [Required]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd-hh-mm}", ApplyFormatInEditMode = true)]
-        public System.DateTime SellEndDate { get; set; }
+        public System.DateTime SellEndDate
+        {
+            get { return _finishDate; }
+            set { _finishDate = value; }
+        }
         public Nullable<int> ProductSubcategoryID { get; set; }
         public virtual ICollection<ProductProductPhoto> ProductProductPhoto { get; set; }
         public virtual ProductSubcategory Subcategory { get; set; }
