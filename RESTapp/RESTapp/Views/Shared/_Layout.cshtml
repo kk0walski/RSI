@@ -7,7 +7,13 @@
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/navbar-fixed-side.css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @Scripts.Render("~/Scripts/jquery-ui-1.12.1.min.js")
+    <script type="text/javascript">
+    $(function () {
+        // This will make every element with the class "date-picker" into a DatePicker element
+        $('.date-picker').datepicker();
+    })
+    </script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
