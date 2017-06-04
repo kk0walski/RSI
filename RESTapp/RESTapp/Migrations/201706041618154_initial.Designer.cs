@@ -13,7 +13,7 @@ namespace RESTapp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201705300951293_initial"; }
+            get { return "201706041618154_initial"; }
         }
         
         string IMigrationMetadata.Source

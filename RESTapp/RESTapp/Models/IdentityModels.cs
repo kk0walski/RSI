@@ -3,6 +3,9 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
+using System;
 
 namespace RESTapp.Models
 {
@@ -16,7 +19,7 @@ namespace RESTapp.Models
             // Add custom user claims here
             return userIdentity;
         }
-        Required]
+        [Required]
         [Display(Name = "Gender")]
         public bool Gender { get; set; }
         [Required]

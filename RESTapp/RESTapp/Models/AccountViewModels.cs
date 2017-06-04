@@ -85,9 +85,11 @@ namespace RESTapp.Models
         [Display(Name = "Gender")]
         public bool Gender { get; set; }
         [Required]
+        [Display(Name = "Frist name")]
         [StringLength(30, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 1)]
         public string FirstName { get; set; }
         [Required]
+        [Display(Name = "Last name")]
         [StringLength(30, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 1)]
         public string LastName { get; set; }
         [Required]
