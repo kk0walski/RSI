@@ -6,8 +6,6 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/navbar-fixed-side.css")
-    @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/Scripts/jquery-ui-1.12.1.min.js")
     <script type="text/javascript">
     $(function () {
         // This will make every element with the class "date-picker" into a DatePicker element
@@ -49,6 +47,8 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery-ui")
     @RenderSection("scripts", required: false)
 </body>
 </html>

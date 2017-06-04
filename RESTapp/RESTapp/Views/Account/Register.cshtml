@@ -42,6 +42,19 @@
         </div>
     </div>
     <div class="form-group">
+        @Html.LabelFor(m => m.Gender, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.RadioButtonFor(model => model.Gender, true) Male <br />
+            @Html.RadioButtonFor(model => model.Gender, false) Female
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Birthday, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBox("Birthday", "", new { @class = "date-picker"})
+        </div>
+    </div>
+    <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Register" />
         </div>
