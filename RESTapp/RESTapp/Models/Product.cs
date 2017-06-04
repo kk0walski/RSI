@@ -22,6 +22,7 @@ namespace Client.Models
         public decimal InitialPrice { get; set; }
         public string Description { get; set; }
         [Required]
+        [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd-hh-mm}", ApplyFormatInEditMode = true)]
         public System.DateTime SellStartDate
         {
@@ -29,6 +30,7 @@ namespace Client.Models
             set { _startDate = value; }
         }
         [Required]
+        [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd-hh-mm}", ApplyFormatInEditMode = true)]
         public System.DateTime SellEndDate
         {
