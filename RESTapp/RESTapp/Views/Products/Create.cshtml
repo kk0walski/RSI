@@ -42,7 +42,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.SellStartDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="input-group" id="datetimepicker">
+                <div class="input-group date" id="datetimepicker">
                     @Html.EditorFor(model => model.SellStartDate, new { htmlAttributes = new { @class = "form-control" } })
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
@@ -55,7 +55,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.SellEndDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="input-group" id="datetimepicker">
+                <div class="input-group date" id="datetimepicker2">
                     @Html.EditorFor(model => model.SellEndDate, new { htmlAttributes = new { @class = "form-control" } })
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
@@ -87,9 +87,15 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
     <script type="text/javascript">
         $(function () {
             $('#datetimepicker').datetimepicker();
         });
     </script>
+<script type="text/javascript">
+        $(function () {
+            $('#datetimepicker2').datetimepicker();
+        });
+</script>
 }

@@ -228,6 +228,7 @@
     <Compile Include="Models\ProductPhoto.cs" />
     <Compile Include="Models\ProductProductPhoto.cs" />
     <Compile Include="Models\ProductSubcategory.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
